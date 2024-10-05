@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using System;
 using UniverseApp.Infrastructure.Data;
 
-namespace UniverseApp.Infrastructure.Data.Migrations
+namespace UniverseApp.Infrastructure.Migrations
 {
     [DbContext(typeof(UniverseDbContext))]
     [Migration("00000000000000_CreateIdentitySchema")]

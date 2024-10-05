@@ -6,12 +6,12 @@ using static UniverseApp.Infrastructure.Data.Constants.MovieConst;
 
 namespace UniverseApp.Infrastructure.Data.Models
 {
-    [Comment("Movie Entity")]
-    public class Movie
-    {
+	[Comment("Movie Entity")]
+	public class Movie
+	{
 		[Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        [Comment("Movie Identifier")]
+		[DatabaseGenerated(DatabaseGeneratedOption.None)]
+		[Comment("Movie Identifier")]
 		public int Id { get; set; }
 
 		[Required]
@@ -19,9 +19,9 @@ namespace UniverseApp.Infrastructure.Data.Models
 		[Comment("Movie Title")]
 		public required string Title { get; set; }
 
-        [Required]
+		[Required]
 		[Comment("Movie Episode Identifier")]
-        public int EpisodeId { get; set; }
+		public int EpisodeId { get; set; }
 
 		[Required]
 		[MaxLength(DescriptionMaxLenght)]
@@ -42,13 +42,15 @@ namespace UniverseApp.Infrastructure.Data.Models
 		public DateTime ReleaseDate { get; set; } // format "1977-05-25"
 
 		public ICollection<CharacterMovie> CharactersMovies { get; set; } = new HashSet<CharacterMovie>();
+
+		public ICollection<Planet> Planets { get; set; } = new HashSet<Planet>();
 	}
 }
 
-	//"planets": [],
-	//"starships": [],
-	//"vehicles": [],
-	//"species": [],
-	//"created": "2014-12-10T14:23:31.880000Z",
-	//"edited": "2014-12-20T19:49:45.256000Z",
-	//"url": "https://swapi.dev/api/films/1/"
+
+//"starships": [],
+//"vehicles": [],
+//"species": [],
+//"created": "2014-12-10T14:23:31.880000Z",
+//"edited": "2014-12-20T19:49:45.256000Z",
+//"url": "https://swapi.dev/api/films/1/"
